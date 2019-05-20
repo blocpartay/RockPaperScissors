@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Rock, Paper, Scissors</title>
+        </head>
+        <body>
+            <script>
+                function computerPlay() {
+                    let moves = ['rock', 'paper', 'scissors'];
+                    return moves[(Math.random()*moves.length)|0];
+                } 
+
+                function playerSelection() {
+                    let input = prompt('Type your move, i.e. rock, paper or scissors', computerPlay());
+                    return input.toLowerCase();    
+                }
+
+                
+
+                function game() {
+                    let player = playerSelection();
+                    let computer = computerPlay();
+                    alert('computer chose....  ' + computer);
+                    if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
+                        return alert('You win!!');
+                    }
+                    else {
+                        if (player == computer) {
+                            return alert('You draw!!');
+                        }
+                        else {
+                            return alert('You lost!!');
+                        } 
+                    }
+            </script>
+        </body>
+    </html>
