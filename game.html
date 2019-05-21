@@ -16,8 +16,8 @@
                 }
 
                 
-
-                function game() {
+                //Approach 1 - No parameters are required
+                function round() {
                     let player = playerSelection();
                     let computer = computerPlay();
                     alert('computer chose....  ' + computer);
@@ -32,6 +32,112 @@
                             return alert('You lost!!');
                         } 
                     }
+                }
+                //invoke round
+                round();
+
+
+                OR
+
+                //Approach 2 - The parameters invoke the other functions directly
+                function round(player, computer) {
+                   
+                    alert('computer chose....  ' + computer);
+                    if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
+                        return alert('You win!!');
+                    }
+                    else {
+                        if (player == computer) {
+                            return alert('You draw!!');
+                        }
+                        else {
+                            return alert('You lost!!');
+                        } 
+                    }
+                }
+                //invoke round
+                console.log(round(playerSelection(),computerPlay()));
+
+
+                OR
+
+                //Approach 3 - The parameters reference variables, which then invoke the other functions
+                function round(player, computer) {
+                   
+                   alert('computer chose....  ' + computer);
+                   if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
+                       return alert('You win!!');
+                   }
+                   else {
+                       if (player == computer) {
+                           return alert('Its a draw!!');
+                       }
+                       else {
+                           return alert('You lost!!');
+                       } 
+                   }
+               }
+               //invoke round
+               const player = playerSelection();
+               const computer = computerPlay();
+               console.log(round(player, computer));
+
+
+
+
+                //Approach 2 with different return method
+                function round(player, computer) {
+                   
+                   alert('computer chose....  ' + computer);
+                   let result;
+                   if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
+                       return result = 'Win';
+                   }
+                   else {
+                       if (player == computer) {
+                            return result = 'Draw';
+                       }
+                       else {
+                            return result = 'Lose';
+                       } 
+                   }
+               }
+               //invoke round
+               console.log(round(playerSelection(),computerPlay()));
+
+
+               function game() {
+                    let r, win=0, draw=0, lose=0, gameround;  
+                    for (r=0; r<5; r++) {
+                        gameround = round(playerSelection(),computerPlay());
+                        console.log(gameround);
+                        if (gameround == 'win') {
+                            win ++;
+                        }
+                        else {
+                            if (gameround == 'draw') {
+                                draw ++;
+                            }
+                            else {
+                                lose ++;
+                            }
+
+                        }
+                    }
+                    if (win > lose) {
+                        console.log('YOU WIN!!!');
+                    }
+                    else {
+                        if (win == lose) {
+                            console.log('Its a Draw');
+                        }
+                        else {
+                            console.log('You Lose!!!');
+                        }
+                    }
+                    console.log('The results are: Wins = ' + win + ' Draws = ' + draw + ' Loses = ' + lose);
+               }
+
             </script>
         </body>
     </html>
