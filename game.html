@@ -15,77 +15,6 @@
                     return input.toLowerCase();    
                 }
 
-                
-                //Approach 1 - No parameters are required
-                function round() {
-                    let player = playerSelection();
-                    let computer = computerPlay();
-                    alert('computer chose....  ' + computer);
-                    if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
-                        return alert('You win!!');
-                    }
-                    else {
-                        if (player == computer) {
-                            return alert('You draw!!');
-                        }
-                        else {
-                            return alert('You lost!!');
-                        } 
-                    }
-                }
-                //invoke round
-                round();
-
-
-                OR
-
-                //Approach 2 - The parameters invoke the other functions directly
-                function round(player, computer) {
-                   
-                    alert('computer chose....  ' + computer);
-                    if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
-                        return alert('You win!!');
-                    }
-                    else {
-                        if (player == computer) {
-                            return alert('You draw!!');
-                        }
-                        else {
-                            return alert('You lost!!');
-                        } 
-                    }
-                }
-                //invoke round
-                console.log(round(playerSelection(),computerPlay()));
-
-
-                OR
-
-                //Approach 3 - The parameters reference variables, which then invoke the other functions
-                function round(player, computer) {
-                   
-                   alert('computer chose....  ' + computer);
-                   if ((player == 'rock' & computer == 'scissors') || (player == 'scissors' & computer == 'paper') || (player == 'paper' & computer == 'rock')) {
-                       return alert('You win!!');
-                   }
-                   else {
-                       if (player == computer) {
-                           return alert('Its a draw!!');
-                       }
-                       else {
-                           return alert('You lost!!');
-                       } 
-                   }
-               }
-               //invoke round
-               const player = playerSelection();
-               const computer = computerPlay();
-               console.log(round(player, computer));
-
-
-
-
-                //Approach 2 with different return method
                 function round(player, computer) {
                    
                    alert('computer chose....  ' + computer);
@@ -104,7 +33,6 @@
                }
                //invoke round
                console.log(round(playerSelection(),computerPlay()));
-
 
                function game() {
                     let r, win=0, draw=0, lose=0, gameround;  
