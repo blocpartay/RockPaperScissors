@@ -37,15 +37,17 @@ function game() {
 
         gameround = round(playerSelection(),computerPlay());
         console.log(gameround);
-        if (gameround == 'win') {
+        if (gameround == 'Win') {
             win ++;
         }
-
-        if (gameround == 'draw') {
+        else {
+            if (gameround == 'Draw') {
                 draw ++;
+            }
+            else {
+                lose ++;
+            }
         }
-            
-        lose ++;
     }
 
     if (win > lose) {
@@ -61,5 +63,4 @@ function game() {
     }
     
     console.log('The results are: Wins = ' + win + ' Draws = ' + draw + ' Loses = ' + lose);
-
 }
