@@ -2,8 +2,35 @@
     <html>
         <head>
             <title>Rock, Paper, Scissors</title>
+            <link rel="stylesheet" href="Styles\styles.css">
         </head>
         <body>
-            <script type=text/javascript src=UI.js></script>
+            <div class="selectionButtons">
+                    <button id="Rock" class="selectionButton">Rock</button>
+                
+                    <button id="Paper" class="selectionButton">Paper</button>
+                
+                    <button id="Scissors" class="selectionButton">Scissors</button>
+            </div>
+
+            <div class="gameBoxes">
+                    <p class="gameBox">Player Choice:</p>
+                    <p id="playerGameBox" class="gameBox">Player Start</p>
+                    <p class="gameBox">Computer Score:</p>
+                    <p id="compGameBox" class="gameBox">Computer Start</p>
+            </div>
+
+            <div class="resultBoxes">
+                    <p class="resultBox">Round Result:</p>
+                    <p id="roundResultBox" class="resultBox">Draw</p>
+            </div>
+
+            <div class="scoreBoxes">
+                    <p class="scoreBox">Player Score:</p>
+                    <p id="playerScoreBox" class="scoreBox">0</p>
+                    <p class="scoreBox">Computer Score:</p>
+                    <p id="compScoreBox" class="scoreBox">0</p>
+            </div>
+            <script type=text/javascript src=Scripts\UI.js></script>
         </body>
     </html>
